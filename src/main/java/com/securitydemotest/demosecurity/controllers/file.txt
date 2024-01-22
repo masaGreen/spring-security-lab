@@ -1,0 +1,58 @@
++----------------------+
+|    HTTP Request      |
++----------------------+
+          |
+          v
++----------------------+
+| Security Filter Chain|
+|   (UsernamePassword   |
+|      Authentication   |
+|        Filter)        |
++----------------------+
+          |
+          v
++----------------------+
+| Authentication Manager|
+|    (Delegates to       |
+| AuthenticationProviders|
+|   for authentication) |
++----------------------+
+          |
+          v
++----------------------+
+| Authentication Failed|
+|   (Exception Handling)|
++----------------------+
+          |
+          v
++----------------------+
+| Authentication Success|
+|  (Creates Authentication|
+|       object)         |
++----------------------+
+          |
+          v
++----------------------+
+| Access Decision Manager|
+|  (Makes Authorization  |
+|        Decisions)      |
++----------------------+
+          |
+          v
++----------------------+
+|  Access Granted or    |
+|    Access Denied      |
++----------------------+
+          |
+          v
++----------------------+
+|   Response Generation |
+|  (Processing and      |
+|  Building the Response|
++----------------------+
+          |
+          v
++----------------------+
+|  HTTP Response sent   |
+|    back to the Client |
++----------------------+
