@@ -10,12 +10,5 @@ public class TestController {
     public String hello(){
         return "hello security";
     }
-    @GetMapping("/secured")
-    public String secure(){
-        return "a secure endpoint";
-    }
-    @GetMapping("/denied")
-    public String denied(){
-        return "there was an exception";
-    }
+  
 }
